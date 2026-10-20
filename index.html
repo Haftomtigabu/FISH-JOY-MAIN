@@ -1,0 +1,104 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="apple-touch-icon" href="images/icon.png">
+<link rel="apple-touch-startup-image" href="images/icon.png">
+
+<title>Fish Joy</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #000;
+    }
+
+    body, div, canvas {
+        image-rendering: optimizeSpeed;
+        -webkit-image-rendering: optimizeSpeed;
+        -webkit-interpolation-mode: nearest-neighbor;
+    }
+
+    #outer {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #000;
+    }
+
+    #middle {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+    }
+
+    #container {
+        position: absolute;
+        width: 980px;
+        height: 545px;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        transform-origin: top left;
+    }
+
+    #container canvas {
+        display: block;
+    }
+
+    #msg {
+        position: absolute;
+    }
+
+    #fps {
+        position: fixed;
+        top: 0;
+        left: 0;
+        color: #fff;
+        z-index: 1000;
+        pointer-events: none;
+    }
+</style>
+
+<script src="js/quark.base-1.0.0.alpha.min.js"></script>
+<script src="src/R.js"></script>
+<script src="src/Utils.js"></script>
+<script src="src/fishjoy.js"></script>
+<script src="src/FishManager.js"></script>
+<script src="src/FishGroup.js"></script>
+<script src="src/views/Fish.js"></script>
+<script src="src/views/Cannon.js"></script>
+<script src="src/views/Bullet.js"></script>
+<script src="src/views/Num.js"></script>
+<script src="src/views/Player.js"></script>
+
+</head>
+
+<body>
+
+<div id="outer">
+    <div id="middle">
+        <div id="container"></div>
+        <div id="msg"></div>
+    </div>
+</div>
+
+<div id="fps"></div>
+
+</body>
+</html>
