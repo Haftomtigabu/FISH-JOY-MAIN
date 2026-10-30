@@ -8,6 +8,7 @@
         this.gap = 1;
         this.addSign = false;
         this.autoAddZero = false;
+        this.rotation = 0;
         this.src = null;
         this.playerScoreBoardImage = null;
 
@@ -27,7 +28,7 @@
 
         for (var i = 0; i < count; i++) {
             var rect = this.src[0];
-            var n = new Q.Bitmap({ image: this.src.image, rect: rect, x: (rect[2] - this.gap * (i + 1)) * i, scaleX: .6, scaleY: .6});
+            var n = new Q.Bitmap({ image: this.src.image, rect: rect, x: (rect[2] - this.gap) * i, scaleX: .6, scaleY: .6, rotation: this.rotation});
             this.addChild(n);
         }
     };

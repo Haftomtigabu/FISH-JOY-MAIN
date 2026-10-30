@@ -480,7 +480,7 @@
     // Create six independent players
     game.initPlayer = function () {
 
-        var coin = Number(this.params.coin) || 10000;
+        var coin = Number(this.params.coin) || 100;
 
         this.players = [];
 
@@ -494,7 +494,7 @@
                 startRotation: 0,
                 minRotation: -80,
                 maxRotation: 80,
-                coinX: this.width * 0.25 - 120,
+                coinX: this.width * 0.25 - 130,
                 coinY: this.height - 40,
                 controls: {
                     left: "KeyA",
@@ -513,8 +513,8 @@
                 startRotation: 0,
                 minRotation: -80,
                 maxRotation: 80,
-                coinX: this.width * 0.75 - 40,
-                coinY: this.height - 75,
+                coinX: this.width * 0.75 + 100,
+                coinY: this.height - 40,
                 controls: {
                     left: "KeyJ",
                     right: "KeyL",
@@ -532,8 +532,8 @@
                 startRotation: 180,
                 minRotation: 100,
                 maxRotation: 260,
-                coinX: this.width * 0.25 - 40,
-                coinY: 45,
+                coinX: 285,
+                coinY: 84,
                 controls: {
                     left: "ArrowLeft",
                     right: "ArrowRight",
@@ -550,8 +550,8 @@
                 startRotation: 180,
                 minRotation: 100,
                 maxRotation: 260,
-                coinX: this.width * 0.75 - 40,
-                coinY: 45,
+                coinX: this.width * 0.75 + 100,
+                coinY: 20,
                 controls: {
                     left: "Digit4",
                     right: "Digit6",
@@ -569,8 +569,8 @@
                 startRotation: 90,
                 minRotation: 10,
                 maxRotation: 170,
-                coinX: 35,
-                coinY: this.height * 0.50 + 35,
+                coinX: 70,
+                coinY: this.height * 0.50 + 50,
                 controls: {
                     left: "KeyT",
                     right: "KeyG",
@@ -588,8 +588,8 @@
                 startRotation: -90,
                 minRotation: -170,
                 maxRotation: -10,
-                coinX: this.width - 130,
-                coinY: this.height * 0.50 + 35,
+                coinX: this.width - 105,
+                coinY: this.height * 0.50 + 45,
                 controls: {
                     left: "Numpad4",
                     right: "Numpad6",

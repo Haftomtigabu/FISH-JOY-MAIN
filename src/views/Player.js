@@ -55,10 +55,10 @@
 
             id: "coinNum_" + this.id,
             src: ns.R.numBlack,
-            max: 6,
-            gap: 3,
+            max: 1,
+            gap: 1,
             autoAddZero: true,
-
+            rotation: 2,
         });
 
 
@@ -67,7 +67,7 @@
 
         this.coinNum.setValue(this.coin);
 
-        this.coinNumBG = new Q.Bitmap({ image: ns.R.scoreBoards[this.id].image, rect: ns.R.scoreBoards[this.id].rect, scaleX: .3, scaleY: .3 });
+        this.coinNumBG = new Q.Bitmap({ image: ns.R.scoreBoards[this.id].image, rect: ns.R.scoreBoards[this.id].rect, scaleX: .3, scaleY: .3, rotation: this.startRotation });
         this.coinNumBG.x = this.coinX - 70;
         this.coinNumBG.y = this.coinY - 22;
 
