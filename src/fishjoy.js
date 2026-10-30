@@ -480,7 +480,7 @@
     // Create six independent players
     game.initPlayer = function () {
 
-        var coin = Number(this.params.coin) || 10000;
+        var coin = Number(this.params.coin) || 100;
 
         this.players = [];
 
@@ -494,7 +494,7 @@
                 startRotation: 0,
                 minRotation: -80,
                 maxRotation: 80,
-                coinX: this.width * 0.25 - 120,
+                coinX: this.width * 0.25 - 130,
                 coinY: this.height - 40,
                 controls: {
                     left: "KeyA",
@@ -502,7 +502,10 @@
                     up: "KeyW",
                     down: "KeyS",
                     fire: "KeyF"
-                }
+                },
+                numberOffsetX: 0,
+                numberOffsetY: 3,
+                numberRotation: 0
             },
 
             // Player 2: Bottom-right
@@ -513,15 +516,18 @@
                 startRotation: 0,
                 minRotation: -80,
                 maxRotation: 80,
-                coinX: this.width * 0.75 - 40,
-                coinY: this.height - 75,
+                coinX: this.width * 0.75 + 100,
+                coinY: this.height - 40,
                 controls: {
                     left: "KeyJ",
                     right: "KeyL",
                     up: "KeyI",
                     down: "KeyK",
                     fire: "KeyH"
-                }
+                },
+                numberOffsetX: 0,
+                numberOffsetY: 3,
+                numberRotation: 0
             },
 
             // Player 3: Top-left
@@ -532,15 +538,18 @@
                 startRotation: 180,
                 minRotation: 100,
                 maxRotation: 260,
-                coinX: this.width * 0.25 - 40,
-                coinY: 45,
+                coinX: 285,
+                coinY: 84,
                 controls: {
                     left: "ArrowLeft",
                     right: "ArrowRight",
                     up: "ArrowUp",
                     down: "ArrowDown",
                     fire: "Enter"
-                }
+                },
+                numberOffsetX: -138,
+                numberOffsetY: -47,
+                numberRotation: 180
             },
             // Player 4: Top-right
             {
@@ -550,15 +559,18 @@
                 startRotation: 180,
                 minRotation: 100,
                 maxRotation: 260,
-                coinX: this.width * 0.75 - 40,
-                coinY: 45,
+                coinX: 1010,
+                coinY: 84,
                 controls: {
                     left: "Digit4",
                     right: "Digit6",
                     up: "Digit8",
                     down: "Digit5",
                     fire: "Digit0"
-                }
+                },
+                numberOffsetX: -138,
+                numberOffsetY: -47,
+                numberRotation: 180
             },
 
             // Player 5: Left side, facing right
@@ -569,15 +581,19 @@
                 startRotation: 90,
                 minRotation: 10,
                 maxRotation: 170,
-                coinX: 35,
-                coinY: this.height * 0.50 + 35,
+                coinX: 130,
+                coinY: this.height * 0.50 + 50,
                 controls: {
                     left: "KeyT",
                     right: "KeyG",
                     up: "KeyR",
                     down: "KeyB",
                     fire: "KeyY"
-                }
+                },
+                numberOffsetX: -95,
+                numberOffsetY: 45,
+                numberRotation: 90
+                
             },
 
             // Player 6: Right side, facing left
@@ -588,15 +604,18 @@
                 startRotation: -90,
                 minRotation: -170,
                 maxRotation: -10,
-                coinX: this.width - 130,
-                coinY: this.height * 0.50 + 35,
+                coinX: 990,
+                coinY: 500,
                 controls: {
                     left: "Numpad4",
                     right: "Numpad6",
                     up: "Numpad8",
                     down: "Numpad5",
                     fire: "Numpad0"
-                }
+                },
+                numberOffsetX: -45,
+                numberOffsetY: -90,
+                numberRotation: 270
             }
 
         ];

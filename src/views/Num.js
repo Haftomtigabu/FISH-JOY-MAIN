@@ -8,6 +8,7 @@
         this.gap = 1;
         this.addSign = false;
         this.autoAddZero = false;
+        this.rotation = 0;
         this.src = null;
         this.playerScoreBoardImage = null;
 
@@ -27,16 +28,16 @@
 
         for (var i = 0; i < count; i++) {
             var rect = this.src[0];
-var digitWidth = rect[2] * 0.4;
+            var digitWidth = rect[2] * 0.35;
 
-var n = new Q.Bitmap({
-    image: this.src.image,
-    rect: rect,
-    x: i * (digitWidth + this.gap),
-    scaleX: 0.4,
-    scaleY: 0.4
-}); 
-this.addChild(n);
+            var n = new Q.Bitmap({
+                image: this.src.image,
+                rect: rect,
+                x: i * (digitWidth + this.gap),
+                scaleX: 0.35,
+                scaleY: 0.35
+            });
+            this.addChild(n);
         }
     };
 

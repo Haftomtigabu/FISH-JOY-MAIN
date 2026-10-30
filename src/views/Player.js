@@ -26,6 +26,10 @@
         this.powerDownWasDown = false;
         this.fireCounter = 0;
 
+        this.numberOffsetX = 0;
+        this.numberOffsetY = 0;
+        this.numberRotation = 0;
+
         props = props || {};
 
         Q.merge(this, props, true);
@@ -58,16 +62,16 @@
             max: 5,
             gap: 0,
             autoAddZero: true,
-
+            rotation: 2,
         });
 
-
-        this.coinNum.x = this.coinX - 5;
-        this.coinNum.y = this.coinY + 2;
+        this.coinNum.x = this.coinX + (this.numberOffsetX);
+        this.coinNum.y = this.coinY + (this.numberOffsetY);
+        this.coinNum.rotation = this.numberRotation || 0;
 
         this.coinNum.setValue(this.coin);
 
-        this.coinNumBG = new Q.Bitmap({ image: ns.R.scoreBoards[this.id].image, rect: ns.R.scoreBoards[this.id].rect, scaleX: .3, scaleY: .3 });
+        this.coinNumBG = new Q.Bitmap({ image: ns.R.scoreBoards[this.id].image, rect: ns.R.scoreBoards[this.id].rect, scaleX: .3, scaleY: .3, rotation: this.startRotation });
         this.coinNumBG.x = this.coinX - 70;
         this.coinNumBG.y = this.coinY - 22;
 
