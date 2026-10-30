@@ -54,16 +54,16 @@
         this.coinNum = new ns.Num({
 
             id: "coinNum_" + this.id,
-            src: ns.R.numBlack,
-            max: 6,
-            gap: 3,
+            src: ns.R.coinText,
+            max: 5,
+            gap: 0,
             autoAddZero: true,
 
         });
 
 
-        this.coinNum.x = this.coinX;
-        this.coinNum.y = this.coinY;
+        this.coinNum.x = this.coinX - 5;
+        this.coinNum.y = this.coinY + 2;
 
         this.coinNum.setValue(this.coin);
 

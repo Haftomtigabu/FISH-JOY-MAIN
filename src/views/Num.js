@@ -27,8 +27,16 @@
 
         for (var i = 0; i < count; i++) {
             var rect = this.src[0];
-            var n = new Q.Bitmap({ image: this.src.image, rect: rect, x: (rect[2] - this.gap * (i + 1)) * i, scaleX: .6, scaleY: .6});
-            this.addChild(n);
+var digitWidth = rect[2] * 0.4;
+
+var n = new Q.Bitmap({
+    image: this.src.image,
+    rect: rect,
+    x: i * (digitWidth + this.gap),
+    scaleX: 0.4,
+    scaleY: 0.4
+}); 
+this.addChild(n);
         }
     };
 
